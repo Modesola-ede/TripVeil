@@ -34,7 +34,6 @@ export default function HomeScreen() {
               onChangeText={(val) => {
                 setInputValueofFullname(val);
               }}
-              autoCapitalize='none'
               autoCorrect={false}
               placeholder='Alex Damola'
               placeholderTextColor={'#8f949b'}
@@ -67,7 +66,6 @@ export default function HomeScreen() {
                   setInputValueofPassword(val);
                 }          
               }
-                autoCapitalize='characters'
                 placeholder='*************'
                 placeholderTextColor={'#8f949b'}
                 style={styles.input}
@@ -94,7 +92,6 @@ export default function HomeScreen() {
                   setInputValueofConfirmPassword(val3);
                 }
               }
-                autoCapitalize='characters'
                 placeholder='*************'
                 placeholderTextColor={'#8f949b'}
                 style={styles.input}
@@ -148,7 +145,7 @@ export default function HomeScreen() {
           <View style={styles.loginContainer}>
             <Text style={styles.Alreadysignedup}>Already have an account? 
             <Text
-              onPress={() => router.push('/createAccount')}
+              onPress={() => router.push('/login')}
               style={styles.loginlink}>
                 Log In
             </Text>

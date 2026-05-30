@@ -66,30 +66,14 @@ export default function HomeScreen() {
             </View>
           </View>
 
-          <TouchableOpacity onPress={() => settermsand(!termsand)}
-            style={{ 
-              paddingHorizontal: 20,
-              marginTop:25,
-              flexDirection: 'row', 
-              alignItems: 'center',
-            }}>
-              <Ionicons 
-               name={termsand ? "checkbox" : "square-outline"} 
-              size={24} 
-              color="#b198d5" 
-              style={{ marginRight: 8 }}
-            />
-              <Text style={{textAlign:'center',}}>I agree to the 
 
-              <Text onPress={() => router.push('/createAccount')}>
-                <Text style={{textAlign:'center',color:'#7c3aed',}}>
-                  Terms & Privacy Policy
-                </Text>
-              </Text>
+          <Text onPress={() => router.push('/chooseorenterPassword')}>
+           <Text style={{color:'#7c3aed',textAlign:'right',}}>
+              Forgot Password?
+           </Text>
           </Text>
-          </TouchableOpacity>
-          
 
+          
 
           <TouchableOpacity style={styles.loginbutton}
             onPress={ () => {navigator2.push("/chooseorenterPassword");}}
@@ -100,11 +84,11 @@ export default function HomeScreen() {
           </TouchableOpacity> 
             
           <View style={styles.loginContainer}>
-            <Text style={styles.Alreadysignedup}>Already have an account? 
+            <Text style={styles.signup}>Don't have an account? 
               <Text
                 onPress={() => router.push('/createAccount')}
                 style={styles.loginlink}>
-                  Log In
+                  Sign up
               </Text>
             </Text>
           </View>
@@ -177,7 +161,7 @@ loginlink: {
     marginTop: 20,
     width: '100%',
   },
-  Alreadysignedup: {
+  signup: {
     fontSize: 15,
     color: 'black',
     textAlign: 'center',
