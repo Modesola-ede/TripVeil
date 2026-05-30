@@ -9,9 +9,7 @@ export default function HomeScreen() {
     const [inputValueofPassword, setInputValueofPassword] = useState("");
     const navigator2 = useRouter();
     const router = useRouter();
-    const [termsand, settermsand] = useState(false);
     const [showPassword, setShowPassword]=useState(true);
-    const [showPassword1, setShowPassword1]=useState(true);
 
     const togglePassword=()=>{
       setShowPassword(!showPassword);  
