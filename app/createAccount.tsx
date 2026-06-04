@@ -3,6 +3,7 @@ import { useRouter } from 'expo-router';
 import { useState } from 'react';
 import { StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { styles } from '../Styles/main';
 
 export default function HomeScreen() {
     const [inputValueofEmail, setInputValueofEmail] = useState("");
@@ -157,67 +158,3 @@ export default function HomeScreen() {
 
   );
 }
-
-const styles = StyleSheet.create({
-  input: {
-    flexDirection: 'row',
-    padding:15,
-    alignItems:'center',
-    borderRadius:7,
-    borderWidth:1.5,
-    alignSelf:'center',
-    width:350,
-    fontSize:15,
-    position:'relative',
-  },
-  textforinput: {
-    flexDirection: 'row',
-    padding:10,
-    fontWeight: 'bold',
-    fontSize:20,
-  },
-  createAccounttextdesignfortop:{
-    color: 'black',
-    textAlign: 'center',
-    fontWeight: 'bold',
-    fontSize: 30,
-    marginBottom: 20,
-    paddingTop:50,
-  },
-  createAccountButton:{
-    backgroundColor: '#6730c5',
-    padding: 12,
-    borderRadius:10,
-    marginTop: 10,
-    width : 350,
-    borderWidth:1,
-    alignSelf :'center',
-  },
-  passwordContainer:{
-    width: 350,
-    alignSelf: 'center',
-    position: 'relative',
-    justifyContent: 'center',
-  },
-  visibility:{
-    position: 'absolute',
-    right: 15,
-    height: '100%',
-    justifyContent: 'center',
-  },
-loginlink: {
-    color: '#7c3aed',
-    fontWeight: '600',
-  },
-  loginContainer: {
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginTop: 20,
-    width: '100%',
-  },
-  Alreadysignedup: {
-    fontSize: 15,
-    color: 'black',
-    textAlign: 'center',
-  },
-});

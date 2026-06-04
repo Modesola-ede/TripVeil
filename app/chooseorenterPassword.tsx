@@ -3,6 +3,7 @@ import { useRouter } from 'expo-router';
 import { useState } from 'react';
 import { Image, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { styles } from '../Styles/main';
 
 export default function HomeScreen() {
     const [inputValueofPassword, setInputValueofPassword] = useState("");
@@ -121,7 +122,7 @@ export default function HomeScreen() {
 
 
             <TouchableOpacity style={styles.continueButton}
-                onPress={ () => {navigator3.push("/createAccount");}}
+                onPress={ () => {navigator3.push("/login");}}
             >
                 <Text style={{color: 'white',textAlign: 'center', fontSize : 20,fontWeight:'500',}}>
                     Continue
@@ -135,54 +136,3 @@ export default function HomeScreen() {
   );
 }
 
-const styles = StyleSheet.create({
-  input: {
-    flexDirection: 'row',
-    padding:15,
-    borderRadius:7,
-    borderWidth:1.5,
-    width: '100%',
-    paddingRight: 50,
-    alignSelf:'center',
-    fontSize:15,
-  },
-  textforinput: {
-    flexDirection: 'row',
-    padding:10,
-    fontWeight: '500',
-    fontSize:20,
-  },
-  continueButton:{
-    backgroundColor: '#6730c5',
-    padding: 15,
-    borderRadius:10,
-    marginTop: 50,
-    width : 300,
-    borderWidth:1,
-    alignSelf :'center',
-  },
-  output: {
-    borderWidth: 1,
-    padding: 50,
-    marginTop: 100,
-    color: 'white',
-    alignSelf: 'center',
-  },
-  criteria:{ 
-    paddingHorizontal: 20,
-    flexDirection: 'row', 
-    alignItems: 'center'
-  },
-  passwordContainer:{
-    width: 350,
-    alignSelf: 'center',
-    position: 'relative',
-    justifyContent: 'center',
-  },
-  visibility:{
-    position: 'absolute',
-    right: 15,
-    height: '100%',
-    justifyContent: 'center',
-  },
-});
