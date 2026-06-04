@@ -1,11 +1,11 @@
 import { Ionicons } from "@expo/vector-icons";
 import { useRouter } from 'expo-router';
 import { useState } from 'react';
-import { Image, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import { Image, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { styles } from '../Styles/main';
 
-export default function HomeScreen() {
+export default function chooseorenterPasswordScreen() {
     const [inputValueofPassword, setInputValueofPassword] = useState("");
     const [inputValueofConfirmPassword, setInputValueofConfirmPassword] = useState("");
     const navigator3 = useRouter();
@@ -19,6 +19,9 @@ export default function HomeScreen() {
       setShowPassword1(!showPassword1);  
     };
 
+    const upto8 = inputValueofPassword.length >= 8;
+    const hasNumberOrSymbol = /[^a-zA-Z]/.test(inputValueofPassword);
+    const passwordsMatch = inputValueofPassword === inputValueofConfirmPassword && inputValueofPassword.trim() !== '';
 
     
   return (
@@ -30,7 +33,7 @@ export default function HomeScreen() {
 
            <Image
             source={require('../assets/images/sequrity2.png')}
-            style={{ width: 600, height: 150, alignSelf:'center'}}
+            style={{ width: 550, height: 100, alignSelf:'center'}}
            />
 
           <View>
@@ -82,43 +85,43 @@ export default function HomeScreen() {
             </View>  
           </View>
 
-        <Text style = {{padding:10}}></Text>
+        <Text style = {{padding:5}}></Text>
 
-            {inputValueofPassword.length >=8 &&(
             <View style={styles.criteria}>
-            <Ionicons 
-               name={"checkbox"} 
-              size={24} 
-              color="#b198d5" 
-            />
-             <Text style={{ fontSize : 15,paddingBottom : 20, paddingTop : 20}}>At least 8 characters</Text>
+              <Ionicons 
+                name={upto8 ? "checkbox" : "square-outline"} 
+                size={24} 
+                color={upto8 ? "#b198d5" : "#grey"} 
+             />
+              <Text style={[styles.textForCriterias, { color: upto8 ? "black" : "grey" }]}>
+                At least 8 characters
+              </Text>
             </View>
-            )}
 
 
 
-            {/[^a-zA-Z]/.test(inputValueofPassword) &&(
-                <View style={styles.criteria}>
-                <Ionicons 
-                name={"checkbox"} 
+            <View style={styles.criteria}>
+              <Ionicons 
+                name={hasNumberOrSymbol ? "checkbox" : "square-outline"} 
                 size={24} 
-                color="#b198d5" 
-                />
-                <Text style={{ fontSize : 15,paddingBottom : 20, paddingTop : 20}}>Includes a number or a symbol</Text>
-                </View>
-            )}
+                color={hasNumberOrSymbol ? "#b198d5" : "#grey"} 
+             />
+              <Text style={[styles.textForCriterias, { color: upto8 ? "black" : "grey" }]}>
+                Includes a number or a symbol
+              </Text>
+            </View>
 
 
-            {inputValueofPassword === inputValueofConfirmPassword && inputValueofPassword.trim() !== '' && inputValueofConfirmPassword.trim() !== ''&&(
-                <View style={styles.criteria}>
-                <Ionicons 
-                name={"checkbox"} 
+            <View style={styles.criteria}>
+              <Ionicons 
+                name={passwordsMatch ? "checkbox" : "square-outline"} 
                 size={24} 
-                color="#b198d5" 
-                />
-                <Text style={{ fontSize : 15,paddingBottom : 20, paddingTop : 20}}>Password match</Text>
-                </View>
-            )}
+                color={passwordsMatch ? "#b198d5" : "#grey"} 
+             />
+              <Text style={[styles.textForCriterias, { color: upto8 ? "black" : "grey" }]}>
+                Password match
+              </Text>
+            </View>
 
 
             <TouchableOpacity style={styles.continueButton}

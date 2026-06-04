@@ -6,7 +6,7 @@ import { Image, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 
-export default function HomeScreen() {
+export default function tripsScreen() {
     const [inputfordestination, setinputfordestination] = useState("");
     const [inputfortripname, setinputfortripname] = useState("");
     const [inputfortraveldates, setinputfortraveldates] = useState("");

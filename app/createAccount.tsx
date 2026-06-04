@@ -1,11 +1,11 @@
 import { Ionicons } from "@expo/vector-icons";
 import { useRouter } from 'expo-router';
 import { useState } from 'react';
-import { StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import { Text, TextInput, TouchableOpacity, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { styles } from '../Styles/main';
 
-export default function HomeScreen() {
+export default function createAccountScreen() {
     const [inputValueofEmail, setInputValueofEmail] = useState("");
     const [inputValueofPassword, setInputValueofPassword] = useState("");
     const [inputValueoFullname, setInputValueofFullname] = useState("");

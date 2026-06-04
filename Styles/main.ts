@@ -117,6 +117,11 @@ welcomebacktextdesignfortop:{
     flexDirection: 'row', 
     alignItems: 'center'
   },
+  textForCriterias:{
+    fontSize: 15,
+    paddingBottom: 10,
+    paddingTop: 10,
+  },
   imagebox: {
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -189,5 +194,39 @@ welcomebacktextdesignfortop:{
     alignItems: 'center',
     paddingTop: 15,
 
+  },
+  orblockdesign: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginVertical: 20,
+    paddingHorizontal: 20,
+    marginTop:20,
+  },
+  orlines: {
+    flex: 1,
+    height: 1,
+    backgroundColor: '#8f949b',
+  },
+  ortextdesigh:{
+    color:'#8f949b',
+    paddingLeft:10,
+    paddingRight:10,
+  },
+  appleAndGoogleContainer:{
+    alignSelf:'center',
+    alignItems:'center',
+    borderWidth:1,
+    borderRadius:5,
+    borderColor:'#8f949b',
+    padding:10,
+    margin:10,
+    width:350,
+    justifyContent:'center',
+    flexDirection: 'row',
+  },
+  appleAndGoogleTextcontainer:{
+    paddingLeft:10,
+    fontSize:15,
+    fontWeight:'500',
   }
 });
