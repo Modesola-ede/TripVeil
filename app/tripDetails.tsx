@@ -91,7 +91,7 @@ export default function tripDetailsScreen() {
 
         <View>
             <TouchableOpacity style={styles.NextButton}
-                onPress={ () => {next.push("/tripDetails");}}
+                onPress={ () => {next.push("../status");}}
             >
                 <Text style={{color: 'white',textAlign: 'center', fontSize : 20,fontWeight:'300'}}>
                 Next

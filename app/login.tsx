@@ -81,7 +81,7 @@ export default function LoginScreen() {
 
 
           <TouchableOpacity style={styles.loginbutton}
-            onPress={ () => {navigator2.push("/trips");}}
+            onPress={ () => {navigator2.push("../trips");}}
             >
             <Text style={{color: 'white',textAlign: 'center', fontSize : 25,fontWeight:'500'}}>
               Log in

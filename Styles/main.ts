@@ -47,22 +47,22 @@ export const styles = StyleSheet.create({
     height: '100%',
     justifyContent: 'center',
   },
-loginlink: {
+  loginlink: {
     color: '#7c3aed',
     fontWeight: '600',
   },
-loginContainer: {
+  loginContainer: {
     alignItems: 'center',
     justifyContent: 'center',
     marginTop: 20,
     width: '100%',
   },
-Alreadysignedup: {
+  Alreadysignedup: {
     fontSize: 15,
     color: 'black',
     textAlign: 'center',
   },
-welcomebacktextdesignfortop:{
+  welcomebacktextdesignfortop:{
     color: 'black',
     textAlign: 'center',
     fontWeight: 'bold',
@@ -228,5 +228,79 @@ welcomebacktextdesignfortop:{
     paddingLeft:10,
     fontSize:15,
     fontWeight:'500',
-  }
+  },
+  lagosSolotext:{
+    textAlign: 'center',
+    fontWeight: '100',
+    fontSize: 20,
+  },
+  statustext:{
+    textAlign: 'center',
+    fontSize: 30,
+    fontWeight:'400',
+  },
+  caremessagetext:{
+    textAlign: 'center',
+    fontSize: 13,
+    marginBottom: 50,
+    fontWeight:'400',
+  },
+  checkinAndViewButtonText:{
+    color: 'white',
+    textAlign: 'center',
+    fontSize : 20,
+    fontWeight:'500',
+  },
+  gracePeriodbox:{
+    alignItems:'flex-start',
+    borderWidth:1,
+    borderColor:'#8f949b',
+    padding:40, 
+    borderRadius:20,
+    margin: 20,
+    paddingHorizontal: 20,
+  },
+  expectedAndEndSameLine:{
+    justifyContent:'space-between',
+    marginHorizontal:30,
+    flexDirection: 'row',
+    paddingBottom:10,
+  },
+  expectedAndEndSameLineInAlerts:{
+    justifyContent:'space-evenly',
+    alignContent:'space-between',
+    flexDirection: 'row',
+    textAlign:'center',
+    alignItems:'center'
+  },
+  cauimage:{
+    marginTop:30,
+    width: 500,
+    height: 175,
+    alignSelf:'center',
+    borderRadius: 10,
+  },
+  triggerButton:{
+    borderWidth:1,
+    borderColor:'#f97316',
+    padding:10, 
+    borderRadius:12,
+    margin: 20,
+    marginTop:10,
+  },
+  notififiedContactsText:{
+    alignItems:'center',
+    paddingTop:40,
+    fontSize:20,
+  },
+  mapimage: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    margin: 10,
+    width: 500,
+    height: 200,
+    alignSelf:'center',
+    borderRadius: 10,
+  },
 });
