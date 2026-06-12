@@ -1,5 +1,5 @@
 import { Ionicons } from "@expo/vector-icons";
-import { useRouter } from 'expo-router';
+import { Stack, useRouter } from 'expo-router';
 import { Image, Text, TouchableOpacity, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { styles } from '../Styles/main';
@@ -11,6 +11,7 @@ export default function chooseorenterPasswordScreen() {
     
   return (
     <SafeAreaView style={{backgroundColor:'white', flex:1}}>
+        <Stack.Screen options={{ headerShown: false }} />
         <View>
             
             <View style={styles.arrowforbackandcreatenewtripcontainer}>
@@ -56,18 +57,19 @@ export default function chooseorenterPasswordScreen() {
             <Text>12:15 PM</Text>
             </View>
 
-            <TouchableOpacity style={[styles.NextButton,{marginTop:15,}]}
-                onPress={ () => {navigator.push("/login");}}
+            <TouchableOpacity style={[styles.NextButton,{marginTop:15,backgroundColor:'#f97316'}]}
+                onPress={ () => {navigator.push("/systemWaits");}}
             >
                 <Text style={[styles.checkinAndViewButtonText,{fontSize:15}]}>
                     I'm Ok, Check-in Now
                 </Text>
             </TouchableOpacity> 
 
-            <Text style={{alignSelf:'center', fontSize:15, fontWeight:'regular',marginTop:10,}}>Need HELP?</Text>
+            <Text style={{alignSelf:'center', fontSize:15, fontWeight:'regular',marginTop:10,}}>
+                Need HELP?</Text>
 
             <TouchableOpacity style={styles.triggerButton}
-                onPress={ () => {navigator.push("/login");}}
+                onPress={ () => {navigator.push("/alertTriggered");}}
             >
                 <Text style={[styles.checkinAndViewButtonText,{color:'black',fontWeight:'normal',fontSize:15}]}>
                     Trigger SOS

@@ -1,5 +1,5 @@
 import { Ionicons } from "@expo/vector-icons";
-import { useRouter } from 'expo-router';
+import { Stack, useRouter } from 'expo-router';
 import React from 'react';
 import { Image, Linking, Platform, Text, TouchableOpacity, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -24,6 +24,7 @@ export default function LocationSharedScreen() {
 
   return (
     <SafeAreaView style={{ backgroundColor: 'white', flex: 1 }}>
+      <Stack.Screen options={{ headerShown: false }} />
 
       <View style={styles.arrowforbackandcreatenewtripcontainer}>
         <Ionicons 
@@ -45,7 +46,7 @@ export default function LocationSharedScreen() {
       </View>
 
         
-        <View style={{marginTop: 20 }}>
+        <View>
          
           <View style={[styles.ReasonForTripStayOnTheSameLine,{right:70,}]}>
             <Ionicons 
@@ -75,11 +76,11 @@ export default function LocationSharedScreen() {
             </View>  
 
 
-          <Text style={[styles.lagosSolotext, { fontWeight: '500', marginBottom: 6,}]}>
+          <Text style={[styles.lastUpdateText, { fontWeight: '500', marginBottom: 6,}]}>
             Lagos, Nigeria
           </Text>
 
-          <Text style={[styles.caremessagetext, { color: '#64748b' }]}>
+          <Text style={[styles.lastUpdateText, { color: '#64748b' }]}>
             Last updated: 2:00 PM
           </Text>
         </View>

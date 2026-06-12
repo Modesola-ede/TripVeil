@@ -1,8 +1,9 @@
 import { Ionicons } from "@expo/vector-icons";
-import { useRouter } from 'expo-router';
+import { Stack, useRouter } from 'expo-router';
 import { Image, Text, TouchableOpacity, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { styles } from '../Styles/main';
+
 
 export default function chooseorenterPasswordScreen() {
     const navigator = useRouter();
@@ -11,6 +12,7 @@ export default function chooseorenterPasswordScreen() {
     
   return (
     <SafeAreaView style={{backgroundColor:'white', flex:1}}>
+        <Stack.Screen options={{ headerShown: false,}} />
         <View>
             
             <View style={styles.arrowforbackandcreatenewtripcontainer}>
@@ -67,7 +69,7 @@ export default function chooseorenterPasswordScreen() {
             </View>
 
             <TouchableOpacity style={[styles.NextButton,{margin:50, marginTop:50,}]}
-                    onPress={ () => {navigator.push("/alertTriggered");}}
+                    onPress={ () => {navigator.push("/status");}}
                 >
                 <Text style={styles.checkinAndViewButtonText}>
                     Cancel Alert I'm Safe!

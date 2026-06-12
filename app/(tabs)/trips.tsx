@@ -132,7 +132,7 @@ export default function tripsScreen() {
 
         <View>
             <TouchableOpacity style={styles.NextButton}
-                onPress={ () => {next.push("../tripDetails");}}
+                onPress={ () => {next.push("../../tripDetails");}}
             >
                 <Text style={{color: 'white',textAlign: 'center', fontSize : 20,fontWeight:'300'}}>
                 Next

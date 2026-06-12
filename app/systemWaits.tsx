@@ -1,5 +1,5 @@
 import { Ionicons } from "@expo/vector-icons";
-import { useRouter } from 'expo-router';
+import { Stack, useRouter } from 'expo-router';
 import { Text, TouchableOpacity, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { styles } from '../Styles/main';
@@ -11,6 +11,7 @@ export default function chooseorenterPasswordScreen() {
     
   return (
     <SafeAreaView style={{backgroundColor:'white', flex:1}}>
+        <Stack.Screen options={{ headerShown: false }} />
         <View>
             
             <View style={styles.arrowforbackandcreatenewtripcontainer}>
